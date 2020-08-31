@@ -283,7 +283,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 8 * h / 10,
                 width: 59 * w / 80,
                 child: selectedUser == ''
-                    ? SizedBox()
+                    ? Center(
+                        child: Text(
+                          'Chat Now',
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
                     : ListView.builder(
                         itemCount: chats[selectedUser].messages.length,
                         itemBuilder: (context, index) {
